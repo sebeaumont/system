@@ -89,7 +89,7 @@ makeZone :: (String, FilePath) -> Zone
 makeZone (s,p) = Zone
   { zoneType = s 
   , zonePath = zoneTempPath p
-  , zoneTarget = 35000
+  , zoneTarget = 36000
   , lastTemp = 0
   }
 
@@ -127,7 +127,7 @@ instance Display Fan where
   
 -- fan speeds in sensible increments
 fanSpeeds :: [Int]
-fanSpeeds = [35,55..255]
+fanSpeeds = nub $ [0,32..255] ++ [255]
 
 -- set fan speed to an speed
 writeFanPort :: FilePath -> Int -> IO ()

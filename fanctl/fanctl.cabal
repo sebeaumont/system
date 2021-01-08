@@ -1,0 +1,31 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c1e0f6c9db95dd55a857b7bd1163e8aca58cbb997dfd701a9368648916c590ea
+
+name:           fanctl
+version:        0.1.0
+synopsis:       collection of system utilities
+homepage:       https://github.com/sebeaumont/system#readme
+bug-reports:    https://github.com/sebeaumont/system/issues
+maintainer:     Simon Beaumont <datalligator@icloud.com>
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/sebeaumont/system
+
+executable fanctl
+  main-is: fanctl.hs
+  other-modules:
+      Paths_fanctl
+  ghc-options: -Wall
+  build-depends:
+      base >=4.13 && <5
+    , containers
+    , directory
+    , filepath
+  default-language: Haskell2010
